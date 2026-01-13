@@ -1241,3 +1241,47 @@ GitHub Copilot: To view a user’s profile and their posts:
 3. The user’s profile and all their posts will appear below the feed.
 
 This works for any user in the system.
+
+User: CAN you fix the readme.md now, add what you have for test and ,ogs
+
+GitHub Copilot: Summarized conversation history
+
+Using "Apply Patch"
+
+Using "Apply Patch"
+
+
+```
+
+```
+The README.md is now updated to include clear sections on backend testing (with pytest/httpx and Docker instructions), a note about frontend tests (to be implemented), and details about backend logging and how to view logs. Let me know if you want further adjustments or more documentation.
+
+Made changes.
+
+User: am I using jwt? 
+
+GitHub Copilot: Searched for regex `jwt|JWT|pyjwt|from jose|from fastapi_jwt|Bearer|Authorization` (`**/backend/**`), 3 results
+
+Searched for regex `jwt|JWT|pyjwt|from jose|from fastapi_jwt|Bearer|Authorization` (`**/backend/main.py`), no results
+
+Searched for regex `auth|token|login|password` (`**/backend/main.py`), 16 results
+
+Searched for regex `jwt|JWT|pyjwt|from jose|from fastapi_jwt|Bearer|Authorization` (`**/backend/**`), 3 results
+
+Searched for regex `import jwt|jwt.encode|jwt.decode` (`**/backend/**`), no results
+
+Searched for regex `import jwt|jwt.encode|jwt.decode` (`**/backend/**`), no results
+
+You are not actually using JWT in your backend code. While the dependency (pyjwt) is installed and mentioned in documentation, there are no imports or usage of JWT for authentication or token handling in your FastAPI backend. Authentication is currently handled by checking username and password directly. If you want real JWT-based authentication, let me know and I can help you implement it.
+
+User: I dont want to use JWT but dont lie about it in the readme
+
+GitHub Copilot: Using "Apply Patch"
+
+
+```
+
+```
+All references to JWT have been removed from the README.md. The authentication method is now correctly described as username & password (no JWT). Let me know if you need any further adjustments.
+
+Made changes.
