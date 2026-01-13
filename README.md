@@ -1,7 +1,10 @@
+
 # Microblogging Web Application
 
-A Twitter-like microblogging platform built with FastAPI (backend) and React (frontend).
+A Twitter-like microblogging platform built with FastAPI (backend) and a static HTML/JS frontend.
 
+
+![alt text](image-1.png)
 ## Features
 - User profile creation
 - Login/authentication
@@ -18,15 +21,21 @@ A Twitter-like microblogging platform built with FastAPI (backend) and React (fr
 
 ## Tech Stack
 - Backend: FastAPI (Python)
-- Frontend: React
+- Frontend: Static HTML/JS (public/app.html, public/app.js)
 - Database: SQLite
 - Auth: JWT
 - Logging: Python logging
-- Testing: Pytest, Jest
+- Testing: Pytest
 
 ## Setup
 1. Backend: See backend/README.md
-2. Frontend: See frontend/README.md
+2. Frontend: Served as static files (public/app.html, public/app.js) via Docker or open app.html directly in browser.
+
+## Usage
+- Run `docker-compose build` to build containers.
+- Run `docker-compose up` to start backend and frontend services.
+- Access backend API at http://localhost:8000
+- Access static frontend at http://localhost:3000/app.html
 
 ## Development
 - All code is high quality, performant, and tested.

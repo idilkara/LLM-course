@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Microblogging Web App</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2em; }
+      .container { max-width: 600px; margin: auto; }
+      .post { border: 1px solid #ccc; padding: 1em; margin-bottom: 1em; }
+      .reply { margin-left: 2em; color: #555; }
+      .like-btn { color: #007bff; cursor: pointer; }
+      .profile { margin-bottom: 2em; }
+      .feed { margin-bottom: 2em; }
+      .form-group { margin-bottom: 1em; }
+      .btn { padding: 0.5em 1em; background: #007bff; color: #fff; border: none; cursor: pointer; }
+      .btn:disabled { background: #ccc; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Microblogging Web App</h1>
+      <div class="profile">
+        <h2>User Profile</h2>
+        <form id="profile-form">
+          <div class="form-group">
+            <label>Username:</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label>Password:</label>
+            <input type="password" id="password" required />
+          </div>
+          <button class="btn" type="submit">Create / Login</button>
+        </form>
+        <div id="profile-info"></div>
+      </div>
+      <div class="feed">
+        <h2>Global Feed</h2>
+        <form id="post-form">
+          <input type="text" id="post-content" maxlength="280" placeholder="What's happening? (max 280 chars)" required />
+          <button class="btn" type="submit">Post</button>
+        </form>
+        <div id="posts"></div>
+      </div>
+      <div id="user-profile-view"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
